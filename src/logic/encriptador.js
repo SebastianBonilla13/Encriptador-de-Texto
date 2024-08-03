@@ -113,9 +113,9 @@ export function encriptar(varTextoUsuario) {
 
 }
 
-function desencriptar() {
+export function desencriptar(varTextoUsuario) {
     varStrRespuestaDesencriptar = '';
-    if (obtenerTextoUsuario()) {
+    if (validarInputCopy()) {
         // texto to array
         let varTextoArray = varTextoUsuario.split("");
 
@@ -145,9 +145,12 @@ function desencriptar() {
             }
             index++;
         }
+        return varStrRespuestaDesencriptar;
         // mostrar Desencriptado
         /* document.querySelector('#varTexto3').textContent = varStrRespuestaDesencriptar; */
-        console.log(typeof (varTextoUsuario));
+        /* console.log(typeof (varTextoUsuario)); */
+    }else{
+        return null;
     }
 }
 
