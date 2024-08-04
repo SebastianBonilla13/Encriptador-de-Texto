@@ -175,17 +175,6 @@ function validarInputCopy() {
 }); */
 
 function msjAdvertencia(msj) {
-    document.getElementById('msjAdvertencia').textContent = msj;
-}
-
-function copiar() {
-    /* console.log("Soy copiar"); */
-
-    const parrafo = document.getElementById('varTexto3');
-    const contenidoParrafo = parrafo.textContent;
-    navigator.clipboard.writeText(contenidoParrafo);
-
-    alert("Texto copiado al portapapeles!");
-    /* console.log(`Texto copiado ${contenidoParrafo}`); */
+    /* document.getElementById('msjAdvertencia').textContent = msj; */
 }
 
