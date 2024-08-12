@@ -56,7 +56,7 @@ function obtenerTextoUsuario() {
 
         // Hacer funcionalidad del botón copiar
 
-        msjAdvertencia("Solo se permiten letras minúsculas sin caracteres especiales.");
+        /* msjAdvertencia("Solo se permiten letras minúsculas sin caracteres especiales."); */
         return false;
     }
     // habilitar botón copy
@@ -107,7 +107,7 @@ export function encriptar(varTextoUsuario) {
 
         // Hacer funcionalidad del botón copiar
 
-        msjAdvertencia("Solo se permiten letras minúsculas sin caracteres especiales.");
+        /* msjAdvertencia("Solo se permiten letras minúsculas sin caracteres especiales."); */
         return null;
     }
 
@@ -156,13 +156,18 @@ export function desencriptar(varTextoUsuario) {
 
 // Función para validar la entrada del usuario cuando es un texto copiado
 function validarInputCopy() {
+
+    console.log('TEXTO USUARIO ES :>> ', );
+    const regex = /[a-zñ\s]/; // si
+
     const regexMayusculas = /[A-Z]/; // Expresión regular para mayúsculas
     const regexCaracteresEspeciales = /[^a-zA-Z0-9\s]/; // Expresión regular para caracteres especiales
 
     if ((regexMayusculas.test(varTextoUsuario)) || (regexCaracteresEspeciales.test(varTextoUsuario))) {
+        console.log('NO HAGDO NADAAAA :>> ');
         return false;
     }
-
+    console.log('HAGO ALGOOOO?? :>> ');
     return true; // NO contiene
 }
 
