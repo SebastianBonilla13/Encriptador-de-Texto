@@ -80,6 +80,10 @@ function AppEncriptador() {
   }, [val])
 
   //------------------------------------------------------------
+  const handleChangesTextarea = (event) => {
+    handleValidate(event);
+    handleChange(event);
+};
 
   return (
     <div>
